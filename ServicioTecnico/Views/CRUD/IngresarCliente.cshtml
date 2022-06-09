@@ -1,0 +1,34 @@
+﻿@model ModelCliente
+@{
+    ViewData["Title"] = "IngresarCliente";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+  <h5 class="card-header">Ingresar Cliente:</h5>
+  <div class="card-body">
+     
+   <form asp-action="IngresarCliente" asp-controller="CRUD" method="post"> 
+      <div class="mb-3">
+        <label class="form-label">Nombre: </label>
+        <input asp-for="nombre" type="text" class="form-control" >    
+        <span asp-validation-for="nombre" class="text-danger"></span>  
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Domicilio: </label>
+        <input asp-for="domicilio" type="text" class="form-control" >
+        <span asp-validation-for="domicilio" class="text-danger"></span>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Telefono: </label>
+        <input asp-for="telefono" type="text" class="form-control" >
+        <span asp-validation-for="telefono" class="text-danger"></span>
+      </div>        
+
+      <button id="boton" type="submit" class="btn btn-primary">Guardar</button>
+      <a asp-action="Listar" asp-controller="CRUD" class="btn btn-warning" id="boton"> Volver al listado </a> 
+  </form>
+
+  </div>
+</div>
+

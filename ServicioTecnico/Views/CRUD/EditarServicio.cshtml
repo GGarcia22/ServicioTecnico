@@ -1,0 +1,41 @@
+﻿@model ModelServicio
+@{
+    ViewData["Title"] = "EditarServicio";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+  <h5 class="card-header">Editar Service:</h5>
+  <div class="card-body">
+     
+   <form asp-action="EditarServicio" asp-controller="CRUD" method="post">    
+       <input asp-for="id" type="hidden" class="form-control" />
+       <input asp-for="idCliente" type="hidden" class="form-control" />
+      <div class="mb-3">
+        <label class="form-label">Dispositivo: </label>
+        <input asp-for="dispositivo" type="text" class="form-control" >
+        <span asp-validation-for="dispositivo" class="text-danger"></span>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Descripcion: </label>
+        <input asp-for="descripcion" type="text" class="form-control" >
+        <span asp-validation-for="descripcion" class="text-danger"></span>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Estado: </label>
+        <input asp-for="estado" type="text" class="form-control">
+        <span asp-validation-for="estado" class="text-danger"></span>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Fecha de ingres: </label>
+        <input asp-for="fechaDeIngreso" type="datetime" class="form-control">
+        <span asp-validation-for="fechaDeIngreso" class="text-danger"></span>
+      </div>
+          
+      <button id="boton" type="submit" class="btn btn-primary">Guardar</button>
+      <a asp-action="Listar" asp-controller="CRUD" class="btn btn-warning" id="boton"> Volver al listado </a> 
+  </form>
+
+  </div>
+</div>
+

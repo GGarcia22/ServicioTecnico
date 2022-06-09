@@ -1,0 +1,48 @@
+﻿@model List<ModelServicio>
+@{
+    ViewData["Title"] = "VerServicios";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+    <div class="card-header">
+        Lista de Servicios Tecnicos
+    </div>
+    <div class="card-body">
+        <a asp-action="Listar" asp-controller="CRUD" id="boton">Volver al listado de clientes</a>
+        <label id="cant"> Cantidad de servicios realizados: @Model.Count</label>
+    </div>
+</div>
+<hr/>
+<table class="d-lg-table table-bordered">
+    <thead>
+        <tr>
+            <th>Cliente:</th>
+            <th>Dispositivo:</th>            
+            <th>Descripcion:</th>
+            <th>Estado:</th>
+            <th>Fecha de ingreso:</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.idCliente</td>
+                <td>@item.dispositivo</td>
+                <td>@item.descripcion</td>
+                <td>@item.estado</td>
+                <td>@item.fechaDeIngreso</td>
+                <td>
+                    <a asp-action="EditarServicio" asp-controller="CRUD" id="boton" asp-route-id="@item.id">Editar</a>   
+                    <a asp-action="IngresarServicio" asp-controller="CRUD" id="boton" asp-route-id="@item.idCliente"> Agregar Servicio</a>
+                    <a asp-action="EliminarServicio" asp-controller="CRUD" id="boton" asp-route-id="@item.id">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+

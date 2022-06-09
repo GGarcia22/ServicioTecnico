@@ -1,0 +1,85 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background-color: #D8FFF4;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#elNav {
+    background-color: #CDFFF1;
+}
+
+
+th, td {
+    padding: 20px;
+}
+
+thead {
+    background-color: #ddd;
+    border-bottom: solid 5px #OF362D;
+    color: black;
+}
+
+tr:nth-child(even) {
+    background-color: #EEEEEE;
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+tr:hover td{
+    background-color: #CDFFF1;
+    color: black;
+}
+
+#boton {
+    border: 3px solid rgba(100, 100, 100, 0.1);
+    margin-bottom: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: black;
+    background-image: linear-gradient(to left, #94EACF, #9DECD4, #83EACA);
+    text-decoration: none;
+    padding: 10px;
+    -webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+
+
+#boton:hover {
+    background-position: right;
+    box-shadow: 0 0 40px 40px #D3FFF2 inset;
+}
+
+#cant {
+    padding: 20px;
+    border-bottom: 10px;
+    border-radius: 5px;
+}
+
+#mensaje {
+    border: 3px solid rgba(100, 100, 100, 0.1);
+    margin-bottom: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: black;
+    background-color: lightgray;
+    text-decoration: none;
+    padding: 10px;
+}
+

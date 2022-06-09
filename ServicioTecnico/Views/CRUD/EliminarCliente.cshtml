@@ -1,0 +1,25 @@
+﻿@model ModelCliente
+@{
+    ViewData["Title"] = "EliminarCliente";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+    <div class="card-header">
+        Eliminar informacion de cliente
+    </div>
+    <div class="card-body">
+
+        <form asp-action="EliminarCliente" asp-controller="CRUD" method="post">
+            <input asp-for="id" type="hidden" class="form-control" />
+            <div class="alert alert-danger" role="alert">    
+                ¿Desea eliminar el cliente: @Model.nombre? 
+            </div>
+
+            <button id="boton" type="submit" class="btn btn-primary">Eliminar</button>
+            <a asp-action="Listar" asp-controller="CRUD" class="btn btn-warning" id="boton">Volver al listado</a>
+        </form>
+
+    </div>
+</div>
+
